@@ -1,0 +1,158 @@
+/* Importação de Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #4CAF50; /* Verde vibrante */
+    --secondary-color: #388E3C; /* Verde escuro */
+    --bg-color: #f4f7f6;
+    --text-color: #333;
+    --card-bg: #fff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+h1 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* --- FORMULÁRIO --- */
+.task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#task-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.add-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.add-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.add-btn:active {
+    transform: scale(0.98);
+}
+
+/* --- LISTA DE TAREFAS --- */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-color);
+    transition: background-color 0.3s;
+}
+
+.task-text {
+    flex-grow: 1;
+    font-size: 17px;
+    word-break: break-word;
+}
+
+/* Estado de Tarefa Concluída */
+.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.action-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.delete-btn, .complete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+.complete-btn {
+    color: var(--primary-color);
+}
+
+.delete-btn {
+    color: #e74c3c; /* Vermelho para exclusão */
+}
+
+.complete-btn:hover {
+    color: var(--secondary-color);
+}
+
+.delete-btn:hover {
+    color: #c0392b;
+}
+/* Adicione esta regra ao seu style.css */
+.search-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 20px; /* Espaçamento antes da lista */
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #388E3C; /* Usa a cor secundária */
+    outline: none;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas Incrível</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Minhas Tarefas do Dia</h1>
+        
+        <form id="task-form" class="task-form">
+            <input 
+                type="text" 
+                id="task-input" 
+                placeholder="Adicione uma nova tarefa..." 
+                required
+            >
+            <button type="submit" class="add-btn">Adicionar</button>
+        </form>
+
+        <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Buscar tarefas..."
+            class="search-input"
+        >
+
+        <ul id="task-list" class="task-list">
+            </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
